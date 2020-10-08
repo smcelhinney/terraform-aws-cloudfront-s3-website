@@ -119,7 +119,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     target_origin_id = "s3-cloudfront"
 
     forwarded_values {
-      headers      = ["*"]
+      headers      = ["Access-Control-Request-Headers", "Access-Control-Request-Method"]
       query_string = false
 
       cookies {
